@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frohe Ostern</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card quiz-card">
+    <div class="egg-icon" aria-hidden="true"></div>
+    <h1>Die Freunde des Hasen</h1>
+    <p class="lead">
+      Ein echter Hase hat viele Freunde. Er kennt die Stimmen der Vögel, die in seinem Garten leben. Ordne die Bilder und Namen der Vögel den richtigen Stimmen zu.
+    </p>
+    <p class="coords">Jede Reihe enthält schon eine Vogelstimme.</p>
+
+    <section class="pool-wrap" aria-label="Movable pieces">
+      <div>
+        <h2 class="pool-title">Bilder (Drag and Drop)</h2>
+        <div id="image-pool" class="token-pool image-pool"></div>
+      </div>
+      <div>
+        <h2 class="pool-title">Namen (Drag and Drop)</h2>
+        <div id="name-pool" class="token-pool name-pool"></div>
+      </div>
+    </section>
+
+    <section id="task-board" class="task-board" aria-label="Bird matching rows"></section>
+
+    <div class="quiz-actions">
+      <button id="check-answers" type="button">Check</button>
+      <p id="quiz-message" class="message" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <div id="success-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="success-title" hidden>
+    <div class="modal-card">
+      <h2 id="success-title">Super!</h2>
+      <p>Richtig zugeordnet. Kriegst du auch das geordnet?</p>
+      <p>R D E R P U A K P E C R I</p>
+      <button id="close-modal" type="button">Continue</button>
+    </div>
+  </div>
+
+  <script src="second.js"></script>
+</body>
+</html>

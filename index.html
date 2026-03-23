@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frohe Ostern</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <div class="egg-icon" aria-hidden="true"></div>
+    <h1>Frohe Ostern</h1>
+    <p class="lead">
+      Ein cleverer Hase sagt nie nein zu einem Sudoku. Vor allem nicht, wenn es den Code enthält:
+    </p>
+    <p class="coords">
+      It&#39;s (1,8)(5,3)(4,9)(8,1)(8,8)(8,9)
+    </p>
+
+    <form id="code-form" novalidate>
+      <label for="code">Gib den 6-stelligen Code ein.</label>
+      <input
+        id="code"
+        name="code"
+        type="text"
+        inputmode="numeric"
+        autocomplete="one-time-code"
+        pattern="[0-9]{6}"
+        maxlength="6"
+        placeholder="123456"
+        required
+      />
+      <button type="submit">Eingabe</button>
+      <p id="message" class="message" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
